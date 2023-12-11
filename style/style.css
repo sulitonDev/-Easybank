@@ -5,9 +5,18 @@
     box-sizing: border-box;
 }
 
+header{
+    position: relative;
+    z-index: 999;
+    background-color: white;
+
+}
+
+
 .container{
     max-width: 1100px;
     margin: 0 auto;
+    /* border: 2px solid red; */
    
 }
 
@@ -17,12 +26,10 @@
     justify-content: space-between;
     align-items: center;
     /* padding: 18px 120px 0px 108px ; */
-    padding-inline: 120px;
-    background-color: white;
+    /* padding-inline: 120px; */
     color: white;
-    position: relative;
     overflow: hidden;
-    z-index: 999;
+    
 }
 
 header .src{
@@ -72,16 +79,16 @@ header nav li{
     cursor: pointer;
 }
 
+/* section1 */
+
    #section1{
     background-color: #FAFAFA;
-    padding: 18px 110px ;
-    /* margin: 0 auto; */
-    /* border: 2px solid red; */
+    padding-block: 110px;
 }
 
 
 #section1 .next{
-    padding: 110px 40px 120px 0px;
+    position: relative;
     z-index: 999;
     width: 38%;
 }
@@ -111,40 +118,43 @@ header nav li{
     background-image:linear-gradient( to right,#30CF6B,#2CBAC8); 
 }
 #section1 button:hover{
-    background-image: linear-gradient(to left,#86f0fc 60% 100%,#61cf8d 40% );
+    background-image: linear-gradient(to right,#86f0fc 60% 100%,#61cf8d 40% );
     cursor: pointer;
 }
 
 .mockup{
-    background-position-x: -36px;
-    background-position-y: -120px;
+    background-position-x: -28px;
+    background-position-y: -100px;
     background-image: url('../images/bg-intro-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 700px;
+    width: 680px;
     position: absolute;
-    top: -25px;
+    top: -12px;
     right: 0px;
     overflow-x: hidden;
+    /* border: 2px solid blue; */
     
 }
 .mock{
     /* transform: translateY(-50px);
     transform: translateX(122px);  */
-    transform:translate(122px, -17px) ;
-    width: 700px;
-    /* height: 750px; */
+    transform:translate(180px, -17px) ;
+    width: 600px;
+    height: 730px;
     /* border: 2px solid red; */
 }
 .mock img{
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
 }
+
+/* section2 */
 
 
 #section2{
     background-color: #F4F5F7;
-    padding-block:90px ;
+    padding-block:83px ;
     /* padding: 90px 130px ; */
     /* margin: 0 auto; */
 }
@@ -235,7 +245,7 @@ header nav li{
     /* border: 2px solid red ; */
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    flex-wrap: warp;
+    flex-wrap: wrap;
     flex-basis: 23%;
     background-color:#FFFFFF;
     justify-content: center;
@@ -365,7 +375,7 @@ header nav li{
 }
 
 #footer .easy button:hover{
-    background-image: linear-gradient(to left,#86f0fc 40% 100%,#61cf8d 60% );
+    background-image: linear-gradient(to left,#84E1AA 40% 100%,#7FD6DD 60% );
     cursor: pointer;
 }
 
@@ -391,10 +401,18 @@ header nav li{
     /* align-content: space-between; */
 
 }
+@media(max-width:1104px){
+    .container{
+        padding-inline: 2rem;
+    }
+}
 
 /* tablet */
 
 @media(max-width:768px){
+    .container{
+        padding-inline: 0;
+    }
 .header{
     padding-inline: 30px;
     padding-block: 20px;
@@ -414,37 +432,86 @@ header .logo{
 header .src{
     display: block;
 }
+
 /* section1 */
 
+   #section1{
+    background-color: #FAFAFA;
+    padding-block: 1px;
+    /* border: 2px solid red; */
+}
+
 #section1 .next{
-    flex-direction: column;
-    padding: 10px 15px;
-    width: 144%;
-    margin-top: 720px;
+    position: static;
+    padding-block: 50px;
+    padding-inline: 20px;
+    width: 100%;
+    margin-top: 525px;
+    text-align: center;
     /* border: 2px solid red; */
  
 }
 
+#section1 .next h1{
+    padding: auto;
+    align-self: center;
+    font-size: 39px ;
+    width: 100%;
+    margin: auto;
+    /* border: 2px solid red; */
+}
+
+
+#section1 .next p{
+    color: #AEADB3;
+    font-size: 0.99rem;
+    /* border: 2px solid red; */
+}
+
+#section1 .next button{
+    margin: auto;
+    margin-bottom: 30px;
+}
+
 .mockup{
-    /* background-position-x: -16px;
-    background-position-y: -10px; */
+    background-position-x: -16px;
+    background-position-y: -10px;
     background-image: url('../images/bg-intro-mobile.svg');
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    width: 700px;
+    width: 100%;
     position: absolute;
-    top: -25px;
-    right: 0px; */
+    top: -23px;
+    right: 0px;
     overflow: hidden;
+    /* border: 2px solid red; */
+    height: 600px;
+
     
 }
 
+
+.mock{
+    transform:translate(0, -120px) ;
+    width: 100%;
+    height: 700px;
+    padding-inline: 10px;
+    /* border: 2px solid blue; */
+}
+.mock img{
+    width: 100%;
+    height: 100%;
+}
+
+/* section2 */
+
 #section2{
-    /* border: 2px solid red; */
     text-align: center;
-    padding: none;
+    padding: 10px;
+    padding-inline: 10px;
+
     margin: none;
 }
+
+
 
 #section2 .easybank{
     width: 100%;
@@ -454,22 +521,23 @@ header .src{
     font-family: 'Public Sans', sans-serif;
     font-weight: 500;
     font-size: 2rem;
-    width: 50%;
     margin: auto;
     text-align: center;
     color: #32324D;
+    width: 40%;
+    padding-top: 50px;
     /* border: 2px solid red; */
 }
 
 #section2 .easybank p{
     font-family: 'Public Sans', sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-block: 30px;
     margin: auto;
     color: #9FA0A7;
     line-height: 1.4;
-    width: 85%;
+    width: 100%;
     /* border: 2px solid red; */
 }
 
@@ -478,7 +546,6 @@ header .src{
     flex-direction: column;
     align-content: center;
     /* border: 2px solid red; */
-    padding: none;
 }
 
 #section2 .online .web{
@@ -515,7 +582,6 @@ header .src{
     background-color:#FAFAFA;
     padding:30px 30px 60px 30px ;
     text-align: center;
-    /* flex-direction: column; */
 }
 
 #section3 h4{
@@ -532,8 +598,6 @@ header .src{
 #section3 .money{
     /* display: flex; */
     flex-wrap: wrap;
-    /* border: 7px solid red; */
-    /* background-color: #FFFFFF; */
     gap: 1.8rem;
     flex-direction: column;
 }
@@ -545,15 +609,15 @@ header .src{
     border-bottom-right-radius: 7px;
     flex-wrap: warp;
     flex-basis: 23%;
+    justify-content: left;
     background-color:#FFFFFF;
-    justify-content: center;
     /* border: 2px solid red; */
 }
 
 #section3 .mobile .by{
-    padding-bottom: 18px;
-    padding-left: 22px;
-    padding-top: 22px;
+    /* border: 2px solid red; */
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #section3 .mobile img{
@@ -581,7 +645,7 @@ header .src{
     font-weight: 600;
     font-size: 1rem;
     color:  hsl(233, 26%, 24%);
-    padding-right: 18px;
+    /* padding-right: 18px; */
 }
 
 #section3 .mobile h6:hover{
@@ -701,48 +765,82 @@ header .src{
         justify-content: space-between;
         /* border: 2px solid red; */
         width: 100%;
-        /* padding: 15px 5px; */
     }
     
     header .src{
         display: block;
     }
+
     /* section1 */
 
-    #section1{
-        background-color: #FAFAFA;
-        padding: 90px;
-        /* margin: 0 auto; */
-        border: 2px solid red;
-    }
-    
-    
-    #section1 .next{
-        flex-direction: column;
-        padding: 5px;
-        /* width: 80%; */
-        margin-top: 720px;
-        border: 2px solid red;
-     
-    }
+   #section1{
+    background-color: #FAFAFA;
+    padding-block: 1px;
+}
 
-  
-    .mockup{
-        /* background-position-x: -16px;
-        background-position-y: -10px; */
-        background-image: url('../images/bg-intro-mobile.svg');
-        /* background-repeat: no-repeat;
-        background-size: cover;
-        width: 700px;
-        position: absolute;
-        top: -25px;
-        right: 0px; */
-        overflow: hidden;
-        
-    }
+#section1 .next{
+    position: static;
+    padding-block: 50px;
+    padding-inline: 20px;
+    width: 100%;
+    margin-top: 300px;
+    text-align: center;
+ 
+}
+
+#section1 .next h1{
+    padding: auto;
+    align-self: center;
+    font-size: 39px ;
+    width: 100%;
+    margin: auto;
+}
+
+
+#section1 .next p{
+    color: #AEADB3;
+    font-size: 0.99rem;
+    width: 100%;
+}
+
+#section1 .next button{
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.mockup{
+    background-position-x: -110px;
+    background-position-y: -88px;
+    background-image: url('../images/bg-intro-mobile.svg');
+    width: 100%;
+    position: absolute;
+    top: -23px;
+    right: 0px;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    height: 600px;
+
+    
+}
+
+
+.mock{
+    transform:translate(0, -56px) ;
+    width: 100%;
+    height: 480px;
+    padding-inline: 10px;
+    /* border: 2px solid blue; */
+}
+.mock img{
+    width: 100%;
+    height: 100%;
+}
+
+
+    /* section2 */
     
     #section2{
-        /* border: 2px solid red; */
+        /* border: 2px solid darkblue; */
         text-align: center;
         padding: none;
         margin: none;
@@ -760,7 +858,6 @@ header .src{
         margin: auto;
         text-align: center;
         color: #32324D;
-        /* border: 2px solid red; */
     }
     
     #section2 .easybank p{
@@ -770,7 +867,6 @@ header .src{
         margin: auto;
         color: #9FA0A7;
         line-height: 1.4;
-        width: 99%;
         /* border: 2px solid red; */
     }
     
@@ -844,6 +940,7 @@ header .src{
     
     #section3 .mobile .by{
         /* border: 2px solid red; */
+        padding-left: 15px;
     }
     
     #section3 .mobile img{
@@ -860,16 +957,12 @@ header .src{
         font-size: 0.57rem;
         color: #99999C;
         padding-bottom: 9px;
+        /* border: 2px solid green; */
     }
     
     #section3 .mobile h6{
-        border: 2px solid red;
+        /* border: 2px solid red; */
         width: 100%;
-        /* padding-bottom: 7px; */
-        font-family: 'Public Sans', sans-serif;
-        font-weight: 600;
-        font-size: 1rem;
-        color:  hsl(233, 26%, 24%);
     }
     
     #section3 .mobile h6:hover{
@@ -878,14 +971,7 @@ header .src{
     }
     
     #section3 .mobile p{
-        /* width: 100%; */
         padding-right: 30px;
-        font-family: 'Public Sans', sans-serif;
-        font-weight: 400;
-        line-height: 1.3;
-        color: #99999C;
-        font-size: 0.75rem;
-        border: 2px solid red;
     }
     
     /* footer */
